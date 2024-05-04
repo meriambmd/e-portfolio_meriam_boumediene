@@ -42,8 +42,26 @@ p{
   color: #2B84A2;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 4em
+  font-size: 4em;
+  opacity: 0; /* Définissez l'opacité initiale à 0 pour cacher le titre */
+  transition: opacity 1s ease; 
+   /* animation: flip 2s ease infinite; */
 }
+/* @keyframes flip { */
+  /* 0% { */
+    /* transform: rotateY(0deg); */
+  /* } */
+  /* 100% { */
+    /* transform: rotateY(360deg); */
+  /* } */
+/* } */
+
+
+h1.show {
+  opacity: 1; /* Lorsque la classe .show est ajoutée, l'opacité est réglée à 1, ce qui fait apparaître le titre */
+}
+
+
 
 .lead-content h5 {
   color: #afaba8;
@@ -171,7 +189,6 @@ h2::after{
 .Moi{
   text-align: center;
   flex-grow: 1;
-  color: #373741;
 }
 
 
@@ -281,52 +298,6 @@ h2::after{
 }
 
 /* FIN CSS PARCOURS DIV */
-/* CSS COMPETENCES DIV */
-
-.competences{
-  position: flex;
-  flex-direction: column;
-  background-color: #2B84A2;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* .competences-titre{ */
-  /* color: #373741; */
-/* } */
-
-.competences2{
-  /* border: solid 10px;
-  border-color: aliceblue; */
-  display: flex;
-  justify-content: space-around;
-  height: 30%;
-  width: 80%;
-  margin-left: 10%;
-  top: 50%;
-}
-
-.competence{
-  text-align: center;
-  min-width: 8%;
-  color: #e1d8cf;
-  background-color: #373741;
-  border-radius: 5px;
-}
-
-.competence p{
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 22%;
-}
-
-.competence2 li:hover {
-  transform: scale(1.05); /* Agrandissement de 5% lors du survol */
-  transition: transform 0.3s ease; /* Animation fluide de 0.3 seconde */
-}
-/* FIN CSS COMPETENCES DIV */
 
 /* CSS PROJET DIV */
 
@@ -338,97 +309,89 @@ h2::after{
   justify-content: space-around;
   padding-bottom: 2%;
   padding-top: 2%;
-  height: 100vh;
+  height: 150vh;
 }
 
 .projet-titre{
 }
 
-
 /* FIN CSS PROJET DIV */
-.carousel-item {
-    position: absolue; /* Position relative pour les éléments du carrousel */
-}
 
-.carousel-item p {
-    position: relative; /* Position absolue par rapport à l'élément parent */
-    /* top: 10px; /* Distance par rapport au haut */ 
-    /* left: 50%; /* Positionnement à 50% à partir de la gauche */ 
-    /* transform: translateX(-50%); /* Décalage de -50% de la largeur de l'élément */ 
-    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
-    color: white; /* Couleur du texte */
-    padding: 5px 5px; /* Espacement intérieur */
-    border-radius: 5px; /* Bords arrondis */
-    font-size: 20px; /* Taille de police */
-}
+
 
 
 /* CSS Skills DIV */
 .skills {
-  display: flex; /* Affiche les compétences en mode flex */
-  flex-wrap: wrap; /* Permet le retour à la ligne des éléments */
+	
+  display: flex; /* Affiche les compétences en mode flex */ 
+  /* flex-wrap: wrap; /* Permet le retour à la ligne des éléments */ 
   justify-content: space-around; /* Répartit les éléments de manière égale avec un espace autour */
   align-items: flex-start; /* Alignement des éléments sur le côté supérieur */
   background-color: #2B84A2; /* Couleur de fond */
   padding: 40px; /* Ajoute un espace intérieur de 20 pixels */
   margin-top: 20px; /* Ajoute une marge en haut de 20 pixels */
-  height: 100vh;
+  height: 110vh;
 }
 
-/* Titre des compétences */
-/* Style du titre des compétences */
-.skills-title {
-  width: 100%; /* Largeur de 100% */
-  text-align: center; /* Alignement du texte au centre */
-  margin-bottom: 30px; /* Marge inférieure de 30 pixels */
+.skill-title{
+  text-align: center;
+  flex-grow: 1;
+  margin-top: 20%;
 }
 
-/* Liste des compétences */
-.skills-list {
-  display: flex; /* Affiche la liste des compétences en mode flex */
-  flex-wrap: wrap; /* Permet le retour à la ligne des éléments */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+	margin-bottom: 10%;
 }
 
-/* Style du titre de chaque compétence */
-.skills-list h3 {
-  text-align: center; /* Alignement du texte au centre */
-  margin-bottom: 40px; /* Marge inférieure de 40 pixels */
-  width: 100%; /* Largeur de 100% */
-  color: #373741; /* Couleur du texte */
+.tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #B3BCBF;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    left: 50%;
+    margin-left: -60px; /* Utilisez la moitié de la largeur de l'infobulle */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-/* Style de la liste des compétences */
-.skills-list ul {
-  list-style-type: none; /* Supprime les puces de liste */
-  padding: 10px; /* Ajoute un espace intérieur de 10 pixels */
+.tooltip-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
-/* Style de chaque compétence */
-.skills-list li {
-  background-color: #e1d8cf; /* Couleur de fond */
-  color: #373741; /* Couleur du texte */
-  padding: 10px; /* Ajoute un espace intérieur de 10 pixels */
-  margin: 10px; /* Marge extérieure de 10 pixels */
-  border-radius: 5px; /* Ajoute un arrondi aux coins */
-  text-align: center; /* Alignement du texte au centre */
-  width: 250px; /* Largeur de 250 pixels */
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	padding-bottom: 2%;
+  padding-top: 2%;
+  margin-left: 200px;
+  margin-right: 100px;
 }
 
-/* Style des compétences impaires */
-.skills-list li:nth-child(odd) {
-  background-color: #cfc7c1; /* Couleur de fond pour les compétences impaires */
+.col img {
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 130px; /* ou toute autre dimension souhaitée */
 }
-.skills-list li:hover {
-  transform: scale(1.05); /* Agrandissement de 5% lors du survol */
-  transition: transform 0.3s ease; /* Animation fluide de 0.3 seconde */
-}
-/* FIN CSS Skills DIV */
+
+
 /* CSS EXPERIENCES DIV */
 
 .experiences{
   /* border: solid 5px;
   border-color: aqua; */
-  display: flex;
+  /* display: flex; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -438,10 +401,13 @@ h2::after{
 }
 
 .experiences-title{
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
+.experience p {
+	text-align: justify;
+}
 .bloc1{
   /* border: solid 5px; */
   width: 50%;
@@ -512,8 +478,6 @@ h2::after{
   text-align: center; /* Centrage du texte */
   font-size: 2rem; /* Taille de police */
   font-weight: bold; /* Gras */
-  color: #373741; /* Couleur du texte */
-
 }
 .blocEmail {
   text-align: center; /* Ajout de la propriété pour centrer le texte */
@@ -536,17 +500,17 @@ h2::after{
   display: inline-block; /* Affichage en bloc inline */
   padding: 10px 20px; /* Espacement intérieur */
   margin: 50px; /* Marge extérieure */
-  border: 2px solid #373741; /* Bordure */
+  border: 2px solid #000000; /* Bordure */
   border-radius: 5px; /* Bordure arrondie */
   text-decoration: none; /* Suppression du soulignement du texte */
-  color: #373741; /* Couleur du texte */
+  color: #000000; /* Couleur du texte */
   transition: all 0.3s ease; /* Transition fluide */
 }
 
 /* Style du survol d'un lien de contact */
 .contact-link:hover {
-  background-color: #373741; /* Couleur de fond au survol */
-  color: #e1d8cf; /* Couleur du texte au survol */
+  background-color: #2B84A2; /* Couleur de fond au survol */
+  color: white; /* Couleur du texte au survol */
 }
  
 
@@ -606,6 +570,11 @@ h2::after{
 .gg-chevron-down:hover{
   opacity: 0.6;
 }
+.modal-body{
+	text-align: justify; /* Justifie le texte à l'intérieur du corps de l'accordéon */
+    text-justify: inter-word; 
+}
+
 
 
 .screen {

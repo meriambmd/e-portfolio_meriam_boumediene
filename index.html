@@ -12,6 +12,10 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
     <script src="js/accueil.js"></script>
+	<script src="css_bootstrap/poppers.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
 
     <link rel="stylesheet" href="style.css">
 	
@@ -37,8 +41,9 @@
     </header>
     <div class="Page">
       <div class="lead-content" id="accueil">
-        <h1>Meriam BOUMEDIENE</h1>
-        <h5>Faites défiler vers le bas pour en savoir plus sur moi </h5>
+		<h5>Bienvenu sur le e-portfolio de </h5>
+        <h1 class="show">Meriam BOUMEDIENE</h1>
+        <h5>Faites défiler vers le bas pour en savoir plus</h5>
         <div class="Divchevron">
           <span>
             <a href="#about" ><i class="gg-chevron-down"></i></a>
@@ -143,68 +148,78 @@
       </div>
     </div>
 	
-			<div class="skills" id="competences">
-		  
-			<h2>Compétences</h2>
-	
-		  <div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
-			  <div class="carousel-inner">
-				<div class="carousel-item active">
-				  <img src="images\python_logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  <p>Python</p>
+		<div class="skills" id="competences">
+			<div class="skill-title">
+				<h2>Compétences</h2>
+			</div>
+			<div class="competences">
+				<div class="row">
+					<div class="col">
+						<!-- Première colonne -->
+						<div class="tooltip-wrapper">
+							<img src="images/python_logo.png" alt="Compétence 1" >
+							 <span class="tooltip-text">Programmation Python de base
+							 <p>Bibliothèques scientifiques et traitement de données (Pandas, Matplotlib, Seaborn)</p></span>
+						 </div>
+						<div class="tooltip-wrapper">						 
+							<img src="images/SAS_logo.png" alt="Compétence 2" >
+							 <span class="tooltip-text">Programmation SAS de base
+							 <p>Analyse statistique</p>
+							 <p>Visualisation des données</p>
+							 <p>Reporting et exportation des données</p>
+							 <p>Macro-programmation SAS </p>
+							 <p>Traitement des données à grande échelle </p></span>
+						 </div>
+						<div class="tooltip-wrapper">						 
+							<img src="images/HTML5_logo.png" alt="Compétence 3">
+							 <span class="tooltip-text">Compréhension de la structure de base d'une page web
+							 <p>Intégration avec CSS et JavaScript</p></span>
+						 </div>
+						<div class="tooltip-wrapper">						 
+							<img src="images/CSS3_logo.png" alt="Compétence 4">
+							 <span class="tooltip-text">Conception visuel</span>
+						 </div>
+					</div>
+					
+					<div class="col">
+						<!-- Deuxième colonne -->
+						<div class="tooltip-wrapper">
+							<img src="images/R_logo.png" alt="Compétence 5" >
+							 <span class="tooltip-text">Programmation en R
+							 <p>Analyse statistique</p>
+							 <p>Visualisation de données</p>
+							  <p>Rédaction de rapports dynamiques (RMarkdown)</p></span>
+						 </div>
+						<div class="tooltip-wrapper">
+							<img src="images/Tableau_Logo.png" alt="Compétence 6" >
+							 <span class="tooltip-text">Création de visualisations interactives
+							 <p>Transformation et nettoyage des données</p>
+							 <p>Analyse de données et calculs (DAX)</p>
+							 <p>Construction de tableaux de bord dynamiques</p>
+							 </span>
+						 </div>
+						<div class="tooltip-wrapper">
+							<img src="images/Power_BI_logo.png" alt="Compétence 7">
+							 <span class="tooltip-text">Modélisation des données
+							 <p>Création de visualisations interactives </p>
+							 <p>Analyse de données et calculs (DAX)</p>
+							 <p>Construction de tableaux de bord interactifs</p>
+							 </span>
+						 </div>
+						<div class="tooltip-wrapper">
+							<img src="images/SAP_logo.png" alt="Compétence 8">
+							 <span class="tooltip-text">Intégration de données
+							 <p>Analyse de données avec SAP BW/BI</p>
+							 <p>Développement et programmation SAP</p>
+							 </span>
+						 </div>
+					</div>
 				</div>
-				<div class="carousel-item">
-				  <img src="images\R_logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  	<p>Rstudio</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\HTML5_logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  				  <p>HTML</p>
-
-				</div>
-			
-				<div class="carousel-item">
-				  <img src="images\CSS3_logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  				  <p>CSS</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\SAS_logo.png" class="d-block w-100" width=150 height=150 alt="...">
-				  				  <p>SAS</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\Tableau_logo.png" class="d-block w-100" width=150 height=150 alt="...">
-				  				  <p>Tableau</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\Power_BI_Logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  				  <p>PowerBi</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\SAP_logo.png" class="d-block w-100" width=250 height=250 alt="...">
-				  				  <p>SAP</p>
-
-				</div>
-				<div class="carousel-item">
-				  <img src="images\microsoft_logo.jpg" class="d-block w-100" width=150 height=150 alt="...">
-				  				  <p>Microsoft OfficeS</p>
-
-				</div>
-			  </div>
-			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			  </button>
-			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			  </button>
 			</div>
 		</div>
+		
+		
+		
 				
     <div class="experiences" id="experience">
       <div class="experiences-title">
@@ -238,18 +253,85 @@
         <h2>Projets</h2>
       </div>
       <div class="items">
-          <div class="item" >
-              <a href="" target="_blank" rel="noopener noreferrer"><img class="map" src="images/projet1.png" alt=""></a>
-          </div>
-          <div class="item">
-              <a href="" target="_blank" rel="noopener noreferrer"><img class="map" src="images/mission1.png" alt=""></a>
-          </div>
-          <div class="item">
-              <a href="" target="_blank" rel="noopener noreferrer"><img class="map" src="images/projet2.png"></a>
-          </div>
-          
+         <div class="item" >
+			<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="map" src="images/projet1.png" alt=""></a>
+		</div>
+		<div class="item">
+			<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="map" src="images/mission1.png" alt=""></a>
+		</div>
+		<div class="item">
+			<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="map" src="images/projet2.png"></a>
+		</div> 
       </div>
     </div> 
+	<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Intégration de données dans un dataWarehouse</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				Nous avons entrepris un projet visant à construire un entrepôt de données pour optimiser les opérations de la plateforme de e-commerce de livres, www.nil.fr. Ce projet, réalisé sur une période déterminée, avait pour objectif principal d'analyser le comportement des utilisateurs afin d'améliorer l'expérience client et les performances globales de Nil.
+				<p>Notre approche méthodologique a été structurée pour faire face à divers défis. Tout d'abord, comprendre en profondeur les besoins de Nil et les objectifs commerciaux a été crucial. Cela a nécessité des échanges approfondis avec les parties prenantes pour clarifier leurs attentes et définir les mesures clés à intégrer dans notre entrepôt de données.</p>Le choix des dimensions et des attributs a également été un défi, nécessitant une sélection judicieuse pour répondre aux besoins de Nil sans surcharger l'entrepôt de données. Une approche itérative avec des retours réguliers des parties prenantes a permis d'affiner ces choix et d'atteindre un équilibre optimal.
+				<p>L'optimisation des requêtes SQL pour extraire efficacement les mesures cruciales a été une autre préoccupation. Nous avons mis en œuvre des techniques telles que l'indexation appropriée et la réécriture de requêtes pour garantir des performances optimales de notre entrepôt de données.
+				</p><p>Ce projet a été une opportunité précieuse pour renforcer mes compétences techniques. J'ai consolidé ma maîtrise de la modélisation de données, de l'optimisation des requêtes SQL et de l'intégration de données en temps réel. De plus, j'ai affiné mes compétences en collaboration avec les parties prenantes, en gestion de projet et en résolution de problèmes complexes.
+				</p><p>En conclusion, ce projet avec Nil a été une expérience enrichissante qui m'a permis de monter en compétences dans divers domaines, tout en contribuant directement à l'optimisation des opérations d'un acteur majeur du e-commerce de livres en France.</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel2">Suivi des livraisons et des commandes chez VWFS</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				<p>En tant que Data Analyst Marketing chez Volkswagen Financial Services, ma mission consiste à fournir un suivi détaillé des livraisons et des commandes pour les cinq marques du groupe. Pour ce faire, je récupère les données à partir des systèmes SAP BO et SAP BW, ainsi que directement auprès des marques elles-mêmes. Mon objectif est de traiter ces données de manière efficace et précise, afin de fournir des informations exploitables au chef de département Brand Management et au directeur marketing.
+				</p><p>L'accomplissement de cette mission comporte plusieurs défis. Tout d'abord, la récupération de données à partir de plusieurs sources peut être complexe. Les systèmes SAP BO et SAP BW ont leurs propres structures de données, tandis que les données des différentes marques peuvent être variées dans leur format et leur accessibilité. Pour surmonter cette difficulté, j'ai dû développer des compétences solides en extraction et en intégration de données, en utilisant des outils adaptés pour récupérer les données de manière cohérente.
+				</p><p>Ensuite, une fois les données récupérées, leur traitement efficace est essentiel. Travaillant principalement sur Excel, j'ai dû élaborer des techniques pour nettoyer, transformer et analyser les données de manière à en extraire des insights pertinents. La gestion des données volumineuses et la nécessité d'une mise à jour régulière ont également constitué des défis, auxquels j'ai répondu en mettant en place des processus efficaces et des outils d'automatisation lorsque cela était possible.
+				</p><p>Ce poste de Data Analyst Marketing m'a permis de développer et de perfectionner un large éventail de compétences techniques. J'ai approfondi ma maîtrise des systèmes SAP BO et SAP BW, ainsi que mes compétences en récupération et en intégration de données. De plus, j'ai affiné mes compétences en analyse de données et en traitement sur Excel, en apprenant à manipuler efficacement des ensembles de données complexes pour en extraire des informations pertinentes.
+				</p><p>En conclusion, ma mission en tant que Data Analyst Marketing chez Volkswagen Financial Services m'a permis de relever des défis complexes tout en développant des compétences techniques essentielles dans le domaine de l'analyse de données. En fournissant un suivi précis des livraisons et des commandes pour les cinq marques du groupe, j'ai contribué directement à la prise de décision stratégique du chef de département Brand Management et du directeur marketing.
+				</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel3">Analyse de séries temporelles de production nucléaire</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				<P> Notre équipe s'est engagée dans une analyse approfondie des données de production nucléaire fournies par l'Administration américaine de l'information sur l'énergie (EIA). Notre mission consiste à explorer les tendances, les schémas saisonniers et à développer des prévisions pour l'année 2023. 
+					</p><p>Dans le cadre de notre analyse des séries temporelles mensuelles de production nucléaire entre 2001 et 2022, détaillées par type de production, nous avons rencontré plusieurs défis. Tout d'abord, la gestion et le traitement de données sur une période aussi longue peuvent être complexes, nécessitant une attention particulière à la qualité des données et à leur cohérence temporelle. Pour surmonter cela, nous avons adopté une approche méthodique, en vérifiant la qualité des données et en effectuant des ajustements lorsque cela était nécessaire pour assurer la fiabilité de nos analyses.
+					</p><p>Ensuite, l'application de méthodes statistiques avancées pour explorer les tendances et développer des prévisions a nécessité une expertise technique approfondie. Nous avons utilisé le langage de programmation R, en nous appuyant sur les bibliothèques "tseries" et "forecast" pour effectuer nos analyses. Cela a demandé une compréhension approfondie des concepts statistiques sous-jacents ainsi qu'une maîtrise pratique des outils de programmation.
+					</p><p>Ce projet nous a permis de développer et de perfectionner nos compétences techniques en analyse de données et en prévision de séries temporelles. En utilisant des méthodes telles que la décomposition des séries temporelles et des modèles de prévision comme Holt-Winters et ARMA, nous avons pu dévoiler les dynamiques cachées derrière les données de production nucléaire. De plus, notre maîtrise de l'analyse des données dans le langage R s'est approfondie, renforçant ainsi notre expertise dans ce domaine crucial.
+					 </p><p>En conclusion, notre analyse approfondie des données de production nucléaire aux États-Unis a révélé des tendances claires et des schémas saisonniers significatifs. Grâce à notre expertise en statistiques et à notre utilisation judicieuse des outils de programmation, nous avons pu fournir des prévisions précises pour l'année 2023. 
+					</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
 <!-- Section "Contact" -->
 <div class="nav-link" href="#contact">
 
@@ -257,11 +339,15 @@
 <!-- Section "Contact" -->
 <section id="contact" class="screen">
   <div class="contact2" id="contacts">
-    <div class="contact-titre">Me contacter</div>
+    <div class="Moi">
+        <h2>Me contacter</h2>
+      </div>
   </div>
   <div class="contact-links">
     <a href="mailto:meriam.boumediene@outlook.fr" class="contact-link">Me contacter par email</a>
-    <a href="https://www.linkedin.com/in/meriam-boumediene-240b35264/" class="contact-link">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/meriam-boumediene-240b35264/" class="contact-link">Mon Profil LinkedIn</a>
+    <a href="files/CV_Meriam_BOUMEDIENE.pdf" download="files/CV_Meriam_BOUMEDIENE.pdf" class="contact-link">Téléchargez mon CV</a>
+
   </div>
 </section>
     </div>
@@ -277,6 +363,17 @@
             <p>Ce site a été créé par Meriam BOUMEDIENE &copy; 2024</p>
         </div>
     </footer>
+	
+	
+	
+<!-- Inclure JS de Bootstrap et Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
+    <!-- Votre script JavaScript -->
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    </script>
 </body>
 </html>
