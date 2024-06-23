@@ -318,7 +318,7 @@ h2::after{
   background-color: #2B84A2; /* Couleur de fond */
   padding: 40px; /* Ajoute un espace intérieur de 20 pixels */
   margin-top: 20px; /* Ajoute une marge en haut de 20 pixels */
-  height: 150vh;
+  min-height: 100vh;
 }
 
 .skill-title {
