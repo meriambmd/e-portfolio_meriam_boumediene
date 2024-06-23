@@ -77,7 +77,7 @@ h1.show {
     color: #E9EFF1;
 	font-weight: bold;
     position: fixed;
-	font-size: 1.3em;
+	font-size: 1.1em;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -115,24 +115,37 @@ h1.show {
 .logo img {
     height: 50px;
 }
+
+.projet{
+  background-color: #2B84A2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2%;
+  padding-top: 1%;
+  height: 150vh;
+}
+
+
 .items{
-    /* border: solid 3px;
-    border-color: pink; */
-    margin-top: 2%;
-    width: 65%;
-    height: 80%;
+    /* border: solid 3px red; */
+    /*border-color: pink;*/
+    /* margin-top: 2%; */
+    width: 80%;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    /* align-items: center;  */
+    justify-content: space-evenly;
 }
 
 .item{
-    border-radius: 50px;
-    margin: 15px 10px;
+    border-radius: 100px;
+    margin: 10px 50px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    height: 300px;
-    width: 300px;
+    height: 5px;
+    width: 5px;
 }
 
 .item:hover{
@@ -196,9 +209,9 @@ h2::after{
   /* border: solid 3px;
   border-color: aliceblue; */
   color: #373741;
-  width: 40%;
+  width: 65%;
   margin-right: 15%;
-  font-size: 1.1em;
+  font-size: 12px;
 }
 
 .accordion-body {
@@ -216,8 +229,7 @@ h2::after{
 	background-color: #463F3A;
 	color: white;
 }
-/* CSS PARCOURS DIV */
-
+/* ##############################PARCOURS#################################### */
 .parcours{
   display: flex;
   height: 100vh;
@@ -227,8 +239,6 @@ h2::after{
   padding-bottom: 2%;
 }
 
-.parcours h2{
-}
 
 .parcours .line{
   color:#2B84A2;
@@ -252,7 +262,7 @@ h2::after{
 
 .parcours .bloc2{
    /* border: solid 5px;  */
-  width: 50%;
+  width: 75%;
   height: 25%;
   display:flex;
   justify-content: center;
@@ -297,96 +307,101 @@ h2::after{
   opacity: 0.;
 }
 
-/* FIN CSS PARCOURS DIV */
 
-/* CSS PROJET DIV */
-
-.projet{
-  background-color: #2B84A2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding-bottom: 2%;
-  padding-top: 2%;
-  height: 150vh;
-}
-
-.projet-titre{
-}
-
-/* FIN CSS PROJET DIV */
-
-
-
-
-/* CSS Skills DIV */
+/* ###################################COMPETENCES################################################# */
 .skills {
 	
   display: flex; /* Affiche les compétences en mode flex */ 
-  /* flex-wrap: wrap; /* Permet le retour à la ligne des éléments */ 
-  justify-content: space-around; /* Répartit les éléments de manière égale avec un espace autour */
-  align-items: flex-start; /* Alignement des éléments sur le côté supérieur */
+  flex-direction: column;
+  justify-content: flex-start; /* Répartit les éléments de manière égale avec un espace autour */
+  align-items: center; /* Alignement des éléments sur le côté supérieur */
   background-color: #2B84A2; /* Couleur de fond */
   padding: 40px; /* Ajoute un espace intérieur de 20 pixels */
   margin-top: 20px; /* Ajoute une marge en haut de 20 pixels */
-  height: 110vh;
+  height: 150vh;
 }
 
-.skill-title{
-  text-align: center;
-  flex-grow: 1;
-  margin-top: 20%;
+.skill-title {
+	/* border: solid 3px red; */
+	text-align: center;
+	margin-bottom: 20px;
+}
+.skill-title h2:after{
+  display: block;
+  content: "";
+  border: solid 1px;
+  width: 50%;
+  margin: 10px auto 0;
+}
+.accordion{
+	background-color: #2B84A2;
+	border-radius: 5px;
+
+}
+.accordion-flush{
+	border: solid 2px #463F3A; 
+	width: 80%;
+	margin-top: 20px;
 }
 
-.tooltip-wrapper {
+.statistics-list {
+    padding-left: 20px; /* Réduire l'indentation des listes */
+}
+
+.statistics-list ul {
+    padding-left: 15px; /* Réduire l'indentation des sous-listes */
+}
+
+.statistics-list li {
+    margin-bottom: 5px; /* Réduire l'espacement vertical entre les éléments de liste */
+    line-height: 1.2; /* Réduire la hauteur de ligne pour une liste plus compacte */
+}
+
+.statistics-list ul li {
+    margin-bottom: 3px; /* Réduire encore plus l'espacement vertical entre les sous-éléments de liste */
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les images */
+    justify-content: center; /* Centrer les images horizontalement */
+}
+.tool {
     position: relative;
     display: inline-block;
-	margin-bottom: 10%;
+}
+
+.tool-icon {
+    width: 80px; /* Ajustez la taille selon vos besoins */
+    height: 60px; /* Assurez-vous que les images ont une taille uniforme */
 }
 
 .tooltip-text {
     visibility: hidden;
-    width: 220px;
-    background-color: #B3BCBF;
+    width: 120px;
+    background-color: #2B84A2;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    left: 100%;
+    bottom: 12%; /* Place it above the icon */
     left: 50%;
-    margin-left: -60px; /* Utilisez la moitié de la largeur de l'infobulle */
+    margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
-.tooltip-wrapper:hover .tooltip-text {
+.tool:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
 }
 
-
-
-.col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	padding-bottom: 2%;
-  padding-top: 2%;
-  margin-left: 200px;
-  margin-right: 100px;
-}
-
-.col img {
-    margin-bottom: 10px;
-    cursor: pointer;
-    width: 130px; /* ou toute autre dimension souhaitée */
-}
-
-
-/* CSS EXPERIENCES DIV */
+/* ##########################EXPERIENCES##################################### */
 
 .experiences{
   /* border: solid 5px;
@@ -407,6 +422,7 @@ h2::after{
 
 .experience p {
 	text-align: justify;
+	font-size: 12px;
 }
 .bloc1{
   /* border: solid 5px; */
@@ -468,11 +484,50 @@ h2::after{
   opacity: 0.;
 }
 
-/* FIN CSS EXPERIENCE DIV */
-/* debut CSS contact DIV */
+/* ##########################PROJETS##################################### */
+
+.projet {
+    background-color: #2B84A2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px; /* Espacement intérieur de la section projet */
+    min-height: 100vh; /* Hauteur minimale de la section projet à 100% de la hauteur de la vue */
+    overflow-y: auto; /* Barre de défilement verticale si nécessaire */
+}
+
+.placeholder-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux placeholders de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les placeholders horizontalement */
+    gap: 20px; /* Espacement entre les placeholders */
+    margin-top: 20px; /* Marge en haut pour séparer des titres */
+}
+
+.card-placeholder {
+    background-color: #f0f0f0; /* Couleur de fond des placeholders */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Espacement intérieur des placeholders */
+    width: calc(33.33% - 20px); /* Largeur des placeholders (33.33% moins l'espacement entre eux) */
+    max-width: 300px; /* Largeur maximale des placeholders */
+    text-align: center; /* Centrage du contenu */
+}
+
+.card-placeholder .card-title {
+    font-weight: bold; /* Texte en gras pour le titre */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 5px; /* Marge en bas du titre */
+}
+
+.card-placeholder .card-text {
+    color: #666; /* Couleur du texte du paragraphe */
+}
 
 
-/* Style du titre "Me contacter" */
+/* ##########################CONTACT##################################### */
+
 .contact-titre {
   margin-top: 20; /* Supprime la marge supérieure par défaut */
   text-align: center; /* Centrage du texte */
@@ -513,14 +568,8 @@ h2::after{
   color: white; /* Couleur du texte au survol */
 }
  
-
-
-
-
-
-/* FIN CSS contact DIV */
-/* CHEVRON CSS */
-
+ 
+/* ##########################CHEVRON##################################### */
 .Divchevron {
   position: absolute;
   left: 0;
@@ -585,6 +634,8 @@ h2::after{
     justify-content: center;
     text-align: center;
 }
+
+/* ##########################FOOTER##################################### */
 .footer {
     background-color: #949494;
     color: #2B84A2;
@@ -594,5 +645,3 @@ h2::after{
     bottom: 0;
     width: 100%;
 }
-  
-  
